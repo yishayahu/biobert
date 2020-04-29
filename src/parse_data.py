@@ -7,8 +7,9 @@ import pickle
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path", help="path to data_jsons",type=str,default='C:\\Users\\Y\\Desktop\\technion\\semester 7\\covid_19\\comm_use_subset\\comm_use_subset\\pmc_json')
-    parser.add_argument("--use_cache", help="use pickle cache sents", type=bool,default=True)
+    parser.add_argument("--path", help="path to data_jsons", type=str, default='/home/yishayahu/biobert/data'
+                                                                               '/comm_use_subset/comm_use_subset/pmc_json')
+    parser.add_argument("--use_cache", help="use pickle cache sents", type=bool, default=False)
     return parser.parse_args()
 
 
@@ -38,5 +39,3 @@ def sents_from_data():
 
 if __name__ == '__main__':
     sents_from_data()
-
-
